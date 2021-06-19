@@ -1,0 +1,113 @@
+body {
+    background: #333 url(../Azure/background.jpg);
+    -webkit-background-size: 100% 200%;
+    /* Safari 3.0 */
+    -moz-background-size: 100% 200%;
+    /* Gecko 1.9.2 (Firefox 3.6) */
+    -o-background-size: 100% 200%;
+    /* Opera 9.5 */
+    background-size: 100% 200%;
+    /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+    font-family: Arial;
+}
+
+span.reference {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    font-size: 12px;
+}
+
+span.reference a {
+    color: #aaa;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000;
+    margin-right: 30px;
+}
+
+span.reference a:hover {
+    color: #ddd;
+}
+
+ul.sdt_menu {
+    margin-top: 150px;
+}
+
+h1.title {
+    text-indent: -9000px;
+    background: transparent url(title.png) no-repeat top left;
+    width: 633px;
+    height: 69px;
+}
+
+h1 {
+    font: normal 28px 'Rochester', cursive;
+    text-align: center;
+    padding: 5px;
+    background-color: #3a3a3b;
+    box-shadow: 0 1px 2px #888;
+    border: 1px solid #333;
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: 160px;
+    margin-left: -80px;
+    color: #fff;
+}
+
+
+#modalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 6;
+    margin: -2% 0px 0px -150px;
+    float: left;
+    width: 300px;
+    color: #fff;
+    line-height: 22px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #00A6B6;
+    border: 1px solid #fff;
+    box-shadow: 0px 2px 1px #999;
+}
+
+#modal {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+    opacity: 0;
+}
+
+#modal>a {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+:target {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+#modalContent>a {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    color: #00A6B6;
+    border-radius: 2px;
+    background: #fff;
+    padding: 4px;
+}

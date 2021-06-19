@@ -1,0 +1,53 @@
+body {
+    background: url("../assets/img/f4.jpg");
+    -webkit-background-size: 100% 100%;
+    /* Safari 3.0 */
+    -moz-background-size: 100% 100%;
+    /* Gecko 1.9.2 (Firefox 3.6) */
+    -o-background-size: 100% 100%;
+    /* Opera 9.5 */
+    background-size: 100% 100%;
+    /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+    
+    /* Gecko 1.9.1 (Firefox 3.5) */
+    font-family: Arial;
+}
+
+span.reference {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    font-size: 12px;
+}
+
+span.reference a {
+    color: #aaa;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000;
+    margin-right: 30px;
+}
+
+span.reference a:hover {
+    color: #ddd;
+}
+
+ul.sdt_menu {
+    margin-top: 150px;
+}
+
+h1 {
+    color: beige;
+    bottom: 150px;
+}
+
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+}
+
+.form {
+    width: 450px;
+}
