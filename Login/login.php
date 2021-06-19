@@ -37,7 +37,7 @@
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                <a class="underlineHover" href="#">recuperar contraseña /</a>
+                <a class="underlineHover" href="recuperar.php">recuperar contraseña /</a>
                 <a class="underlineHover" href="registro.php">registrarse</a>
             </div>
 

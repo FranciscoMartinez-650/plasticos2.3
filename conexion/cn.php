@@ -1,7 +1,7 @@
 <?php
     //function conectar(){
     $conexion = new mysqli
-    ('localhost','root','americayya99','plasticos');
+    ('localhost','root','','plasticos');
     $acentos = $conexion ->query("set names 'utf8'");
     if($conexion ->connect_error){
         
