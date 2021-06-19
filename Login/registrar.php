@@ -22,7 +22,7 @@
         //acción cuando es incorrecto
         header("location: Login.php?status=400");
     } */
-
+/* 
     if(!empty($_POST)){
         $usuario = mysqli_real_escape_string($conexion, $_POST['txtUsuario']);
         $password = mysqli_real_escape_string($conexion, $_POST['txtPassword']);
@@ -38,6 +38,30 @@
         else{
             header("location: Login.php?status=400");
 
+        }
+    } */
+    if(isset($_POST['user']) && isset($_POST['pass'])){
+        $user = mysqli_real_escape_string($conexion, $_POST['user']);
+        $pass = mysqli_real_escape_string($conexion, $_POST['pass']);
+        $sql = "SELECT id_usuario FROM usuarios where usuario = '$user'";
+        $resultado = $conexion -> query($sql);
+
+        $filas = $resultado ->num_rows;
+        if($filas > 0){
+            $_SESSION['Mensaje'] = 'El usuario ya existe';
+            header('location: login.php');
+        }
+        else{
+            $sql = "INSERT INTO usuarios (usuario, contrasena) VALUES ('$user', '$pass')";
+            $resultado = $conexion -> query($sql);
+            if($resultado > 0){
+                $_SESSION['exito'] = 'Has sido registrado';
+                header('location: login.php');
+            }
+            else{
+                $_SESSION['error'] = 'Error al registrarse';
+                header('location: registrar.php');
+            }
         }
     }
 ?>
