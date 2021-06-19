@@ -1,9 +1,11 @@
 <?php
     require '../conexion/cn.php';
     session_start();
-    if(isset($_POST["txtUsuario"]) && isset(["txtPassword"])){
+    if(isset($_POST['txtUsuario'])){
+        $usuario = $_POST['txtUsuario'];
+        echo $usuario;
+    }
         
-    $usuario = $_POST['txtUsuario'];
     $clave = $_POST['txtPassword'];
         
     $query = "SELECT COUNT(*) as contar from Usuarios where usuario = '$usuario' and contrasena = '$clave'";
@@ -19,5 +21,5 @@
         //header("location: login.php");
     }
    //$_SESSION('<script> alert("Error, datos erroneos");</script>');
-}
+
 ?>
